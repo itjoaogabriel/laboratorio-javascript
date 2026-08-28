@@ -17,12 +17,16 @@
         <h1>Laboratório JavaScript</h1>
     </header>
 
-    <nav class="menu-principal">
-        <a class="opcao" href="index.html">Início</a>
-        <a class="opcao" href="pages/condicionais/estruturas-condicionais.html">Estruturas Condicionais</a>
-        <a class="opcao" href="pages/repeticao/estruturas-de-repeticao.html">Estruturas de Repetição</a>
-        <a class="opcao" href="pages/arrays/arrays.html">Vetores e Matrizes</a>
-    </nav>
+    <details class="menu-expansivel">
+        <summary class="botao-menu">Menu</summary>
+
+        <nav class="menu-principal" aria-label="Navegação principal">
+            <a class="opcao" href="index.html">Início</a>
+            <a class="opcao" href="pages/condicionais/estruturas-condicionais.html">Estruturas Condicionais</a>
+            <a class="opcao" href="pages/repeticao/estruturas-de-repeticao.html">Estruturas de Repetição</a>
+            <a class="opcao" href="pages/arrays/arrays.html">Vetores e Matrizes</a>
+        </nav>
+    </details>
 
     <section>
         <h2>Bem-vindo ao Laboratório JavaScript</h2>
@@ -36,6 +40,27 @@
             Escolha uma estrutura no menu lateral para visualizar os
             enunciados, consultar os códigos e executar as atividades.
         </p>
+        <div class="tecnologias-pagina"
+            aria-label="Tecnologias utilizadas no projeto">
+
+            <img
+                class="icone-tecnologia"
+                src="img/html5.svg"
+                alt="Logotipo do HTML5"
+                width="80">
+
+            <img
+                class="icone-tecnologia"
+                src="img/css3.svg"
+                alt="Logotipo do CSS3"
+                width="80">
+
+            <img
+                class="icone-tecnologia"
+                src="img/javascript.svg"
+                alt="Logotipo do JavaScript"
+                width="80">
+        </div>
     </section>
 
     <footer>
