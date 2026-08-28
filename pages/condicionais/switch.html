@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>switch - Laboratório JavaScript</title>
+
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="../../img/logo.png" alt="Logo do Laboratório JavaScript">
+        <h1>Laboratório JavaScript</h1>
+    </header>
+
+    <details class="menu-expansivel">
+        <summary class="botao-menu">Menu</summary>
+
+        <nav class="menu-principal" aria-label="Navegação principal">
+            <a class="opcao" href="../../index.html">Início</a>
+            <a class="opcao" href="../condicionais/estruturas-condicionais.html">Estruturas Condicionais</a>
+            <a class="opcao" href="../repeticao/estruturas-de-repeticao.html">Estruturas de Repetição</a>
+            <a class="opcao" href="../arrays/arrays.html">Vetores e Matrizes</a>
+        </nav>
+    </details>
+
+    <main>
+        <section class="explicacao-estrutura">
+            <div class="tecnologias-pagina">
+                <img src="../../img/html5.svg" alt="HTML5" width="80">
+                <img src="../../img/css3.svg" alt="CSS3" width="80">
+                <img src="../../img/javascript.svg" alt="JavaScript" width="80">
+            </div>
+
+            <h2>Estrutura de seleção switch</h2>
+
+            <p>
+                A instrução <code>switch</code> avalia uma expressão e compara seu
+                resultado com os valores definidos em cada <code>case</code>. Quando
+                encontra uma correspondência, executa as instruções associadas àquele
+                caso.
+            </p>
+
+            <h3>Quando utilizar</h3>
+
+            <p>
+                Essa estrutura é utilizada quando um mesmo valor precisa ser comparado
+                com várias opções possíveis. O <code>break</code> encerra a execução
+                do caso encontrado, enquanto o <code>default</code> trata valores que
+                não correspondem a nenhum dos casos definidos.
+            </p>
+
+            <h3>Sintaxe básica</h3>
+
+            <pre><code>
+                switch (expressao) {
+                    case valor1:
+                        // Executado quando a expressão for igual ao valor1
+                        break;
+
+                    case valor2:
+                        // Executado quando a expressão for igual ao valor2
+                        break;
+
+                    default:
+                        // Executado quando nenhum caso corresponder
+                }
+            </code></pre>
+
+            <h3>Exemplo</h3>
+
+            <pre><code>
+                const opcao = 2;
+
+                switch (opcao) {
+                    case 1:
+                        console.log("Cadastrar");
+                        break;
+
+                    case 2:
+                        console.log("Consultar");
+                        break;
+
+                    default:
+                        console.log("Opção inválida");
+                }
+            </code></pre>
+
+            <p class="fonte-conteudo">
+                Referência:
+                <a
+                    href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/switch"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    MDN Web Docs — switch
+                </a>
+            </p>
+        </section>
+
+        <section class="atividade-estrutura">
+            <h2>Atividade prática</h2>
+            <h3>Identificação do dia da semana</h3>
+
+            <p class="enunciado-atividade">
+                Desenvolva uma aplicação que leia um número inteiro de 1 a 7
+                informado pelo usuário. O programa deverá utilizar a estrutura
+                <code>switch</code> para apresentar o dia da semana correspondente,
+                considerando 1 como domingo, 2 como segunda-feira e assim
+                sucessivamente até 7, que representa sábado. O preenchimento do
+                campo deve ser obrigatório e valores fora desse intervalo deverão
+                ser informados como inválidos.
+            </p>
+
+            <div class="orientacao-console">
+                <h3>Como acompanhar a saída</h3>
+
+                <p>
+                    Esta atividade apresenta a resposta em uma caixa visual para que
+                    seja possível acompanhar a saída sem abrir as ferramentas de
+                    desenvolvimento do navegador. A mesma mensagem também é enviada
+                    ao console real por meio de <code>console.log()</code>.
+                </p>
+
+                <p>
+                    No Google Chrome ou Microsoft Edge, pressione
+                    <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>J</kbd>
+                    para abrir diretamente o console. Também é possível pressionar
+                    <kbd>F12</kbd> e selecionar a aba <strong>Console</strong>.
+                    No macOS, utilize
+                    <kbd>Command</kbd> + <kbd>Option</kbd> + <kbd>J</kbd>.
+                </p>
+
+                <p>
+                    Consulte também as
+                    <a
+                        href="https://developer.chrome.com/docs/devtools/open/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        instruções do Chrome DevTools
+                    </a>.
+                </p>
+            </div>
+
+            <details class="testador-atividade">
+                <summary class="ver-codigo">Ver Código</summary>
+
+                <h3>Código da solução</h3>
+
+                <textarea id="codigo-switch" name="fonte" cols="70" rows="25">
+            <!DOCTYPE html>
+            <html lang="pt-br">
+
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+                <title>Identificação do dia da semana</title>
+
+                <style>
+                    body {
+                        font-family: Arial, sans-serif;
+                    }
+
+                    section {
+                        margin: 20px auto;
+                    }
+
+                    .cadiasem {
+                        width: 300px;
+                        margin: 0 auto 10px;
+                        font-weight: bold;
+                    }
+
+                    .cadiasem input {
+                        box-sizing: border-box;
+                        width: 100%;
+                        margin: 5px auto;
+                        padding: 5px;
+                    }
+
+                    .cadiasem button {
+                        width: 30%;
+                        margin: 0 9%;
+                        background-color: #b1ccf5;
+                        font-weight: bold;
+                        font-size: 16px;
+                    }
+
+                    label {
+                        display: block;
+                    }
+
+                    h2 {
+                        margin-top: 0;
+                        margin-bottom: 10px;
+                        text-align: center;
+                        font-size: 50px;
+                    }
+
+                    .titulo-console {
+                        margin-bottom: 8px;
+                        text-align: center;
+                    }
+
+                    .console-saida {
+                        box-sizing: border-box;
+                        width: 300px;
+                        min-height: 80px;
+                        margin: 20px auto;
+                        padding: 10px;
+                        overflow-wrap: anywhere;
+                        color: #f5f5f5;
+                        background-color: #1e1e1e;
+                        border-radius: 4px;
+                        white-space: pre-wrap;
+                    }
+
+                </style>
+            </head>
+
+            <body>
+
+                <section>
+                    <h2>Identificação do dia da semana</h2>
+
+                    <form
+                        name="frmnumdia"
+                        action="#"
+                        method="get"
+                        onsubmit="return validaFormulario()">
+
+                        <fieldset class="cadiasem">
+                            <legend>Entrada de dados</legend>
+
+                            <br>
+
+                            <label for="numdia">
+                                Informe um número inteiro de 1 a 7:
+                            </label>
+
+                            <input type="text" name="txtnumdia" id="numdia">
+
+                            <br><br>
+
+                            <button type="reset" onclick="document.getElementById('console-saida').textContent =
+                                'A saída aparecerá aqui.';"> Limpar</button>
+                            <button type="submit">Enviar</button>
+                        </fieldset>
+                    </form>
+
+                    <h3 class="titulo-console">Saída do console</h3>
+
+                    <pre id="console-saida" class="console-saida">A saída aparecerá aqui.</pre>
+
+                </section>
+
+                <script type="text/javascript">
+                    function validaFormulario() {
+                        let consoleSaida = document.getElementById("console-saida");
+
+                        let mensagem = "";
+
+                        consoleSaida.textContent = "";
+
+                        let numDia = document.getElementById("numdia").value;
+
+                        if (numDia === "") {
+                            mensagem = "Preencha o campo com um número inteiro.";
+                            alert(mensagem);
+                            console.log(mensagem);
+                            consoleSaida.textContent = mensagem;
+
+                            document.getElementById("numdia").focus();
+
+                            return false;
+                        } else {
+                            let numDiaValidado = parseInt(numDia, 10);
+                            let diaSemana;
+
+                            switch (numDiaValidado) {
+                                case 1:
+                                    diaSemana = "Domingo";
+                                    break;
+
+                                case 2:
+                                    diaSemana = "Segunda-feira";
+                                    break;
+
+                                case 3:
+                                    diaSemana = "Terça-feira";
+                                    break;
+
+                                case 4:
+                                    diaSemana = "Quarta-feira";
+                                    break;
+
+                                case 5:
+                                    diaSemana = "Quinta-feira";
+                                    break;
+
+                                case 6:
+                                    diaSemana = "Sexta-feira";
+                                    break;
+
+                                case 7:
+                                    diaSemana = "Sábado";
+                                    break;
+
+                                default:
+                                    mensagem =
+                                        "O valor informado (" + numDia + ") " +
+                                        "não corresponde a um dia da semana.";
+
+                                    alert(mensagem);
+                                    console.log(mensagem);
+                                    consoleSaida.textContent = mensagem;
+
+                                    document.getElementById("numdia").focus();
+
+                                    return false;
+                            }
+
+                            mensagem =
+                                "O número informado foi " + numDiaValidado + ".\n" +
+                                "O dia correspondente é " + diaSemana + ".";
+
+                            alert(mensagem);
+                            console.log(mensagem);
+                            consoleSaida.textContent = mensagem;
+                        }
+
+                        return false;
+                    }
+                </script>
+
+            </body>
+
+            </html>
+                </textarea>
+
+                <br><br>
+
+                <button
+                    type="button"
+                    onclick="document.getElementById('resultado-switch').srcdoc =
+                            document.getElementById('codigo-switch').value;">
+                    Executar página
+                </button>
+
+                <h3>Resultado</h3>
+
+                <iframe
+                    id="resultado-switch"
+                    title="Resultado da atividade de identificação do dia da semana"
+                    width="900"
+                    height="500"
+                    sandbox="allow-scripts allow-forms allow-modals">
+                </iframe>
+            </details>
+        </section>
+    </main>
+
+    <footer>
+        João Gabriel Soares Santos — ADS — UniSENAI Joinville
+    </footer>
+
+</body>
+
+</html>
