@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>for - Laboratório JavaScript</title>
+
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="../../img/logo.png" alt="Logo do Laboratório JavaScript">
+        <h1>Laboratório JavaScript</h1>
+    </header>
+
+    <details class="menu-expansivel">
+        <summary class="botao-menu">Menu</summary>
+
+        <nav class="menu-principal" aria-label="Navegação principal">
+            <a class="opcao" href="../../index.html">Início</a>
+            <a class="opcao" href="../condicionais/estruturas-condicionais.html">Estruturas Condicionais</a>
+            <a class="opcao" href="../repeticao/estruturas-de-repeticao.html">Estruturas de Repetição</a>
+            <a class="opcao" href="../arrays/arrays.html">Vetores e Matrizes</a>
+        </nav>
+    </details>
+
+    <main>
+    <section class="explicacao-estrutura">
+        <div class="tecnologias-pagina">
+            <img src="../../img/html5.svg" alt="HTML5" width="80">
+            <img src="../../img/css3.svg" alt="CSS3" width="80">
+            <img src="../../img/javascript.svg" alt="JavaScript" width="80">
+        </div>
+
+        <h2>Estrutura de repetição for</h2>
+
+        <p>
+            A instrução <code>for</code> cria uma repetição controlada por
+            três expressões: inicialização, condição e atualização. Enquanto
+            a condição permanecer verdadeira, o bloco de instruções será
+            executado novamente.
+        </p>
+
+        <h3>Quando utilizar</h3>
+
+        <p>
+            Essa estrutura é indicada principalmente quando sabemos quantas
+            vezes uma ação precisa ser repetida ou quando queremos controlar
+            a repetição utilizando um contador.
+        </p>
+
+        <h3>Sintaxe básica</h3>
+
+        <pre><code>
+            for (inicializacao; condicao; atualizacao) {
+                // Instruções executadas em cada repetição
+            }
+        </code></pre>
+
+        <p>
+            As três partes possuem responsabilidades diferentes:
+        </p>
+
+        <ul>
+            <li>
+                <code>inicializacao</code>: cria ou define o valor inicial
+                do contador.
+            </li>
+
+            <li>
+                <code>condicao</code>: determina se a repetição continuará.
+            </li>
+
+            <li>
+                <code>atualizacao</code>: altera o contador depois de cada
+                repetição.
+            </li>
+        </ul>
+
+        <h3>Exemplo</h3>
+
+        <pre><code>
+            for (let tentativa = 1; tentativa <= 3; tentativa++) {
+                console.log("Tentativa número " + tentativa);
+            }
+        </code></pre>
+
+        <p class="fonte-conteudo">
+            Referência:
+            <a
+                href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/for"
+                target="_blank"
+                rel="noopener noreferrer">
+                MDN Web Docs — for
+            </a>
+        </p>
+    </section>
+
+    <section class="atividade-estrutura">
+        <h2>Atividade prática</h2>
+        <h3>Contagem de 1 a 10</h3>
+
+        <p class="enunciado-atividade">
+            Desenvolva uma aplicação que utilize a estrutura de repetição
+            <code>for</code> para imprimir no console os números inteiros
+            compreendidos entre 1 e 10. A cada repetição, o programa deverá
+            apresentar uma mensagem informando o número da passagem e o
+            valor atual do contador.
+        </p>
+
+        <p>
+            Como a atividade não solicita dados ao usuário, o formulário
+            terá apenas o botão <strong>Enviar</strong> e não precisará
+            validar campos obrigatórios.
+        </p>
+
+        <div class="orientacao-console">
+            <h3>Como acompanhar a saída</h3>
+
+            <p>
+                A atividade apresentará as dez mensagens em uma caixa visual
+                para que a sequência possa ser acompanhada diretamente na
+                página. As mesmas mensagens também serão enviadas ao console
+                real do navegador por meio de <code>console.log()</code>.
+            </p>
+
+            <p>
+                No Google Chrome ou Microsoft Edge, pressione
+                <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>J</kbd>
+                para abrir diretamente o console. Também é possível pressionar
+                <kbd>F12</kbd> e selecionar a aba <strong>Console</strong>.
+                No macOS, utilize
+                <kbd>Command</kbd> + <kbd>Option</kbd> + <kbd>J</kbd>.
+            </p>
+
+            <p>
+                Consulte também as
+                <a
+                    href="https://developer.chrome.com/docs/devtools/open/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    instruções do Chrome DevTools
+                </a>.
+            </p>
+        </div>
+
+        <details class="testador-atividade">
+            <summary class="ver-codigo">Ver Código</summary>
+
+            <h3>Código da solução</h3>
+
+            <textarea id="codigo-for" name="fonte" cols="70" rows="25">
+        <!DOCTYPE html>
+        <html lang="pt-br">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            <title>Contagem de 1 a 10</title>
+
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                }
+
+                section {
+                    margin: 20px auto;
+                }
+
+                .cadfor {
+                    width: 300px;
+                    margin: 0 auto 10px;
+                    font-weight: bold;
+                }
+
+                .cadfor button {
+                    display: block;
+                    width: 40%;
+                    margin: 0 auto;
+                    background-color: #b1ccf5;
+                    font-weight: bold;
+                    font-size: 16px;
+                }
+
+                h2 {
+                    margin-top: 0;
+                    margin-bottom: 10px;
+                    text-align: center;
+                    font-size: 50px;
+                }
+
+                .titulo-console {
+                    margin-bottom: 8px;
+                    text-align: center;
+                }
+
+                .console-saida {
+                    box-sizing: border-box;
+                    width: 90%;
+                    max-width: 650px;
+                    min-height: 80px;
+                    margin: 20px auto;
+                    padding: 10px;
+                    overflow-wrap: anywhere;
+                    color: #f5f5f5;
+                    background-color: #1e1e1e;
+                    border-radius: 4px;
+                    font-family: Consolas, "Courier New", monospace;
+                    line-height: 1.5;
+                    white-space: pre-wrap;
+                }
+            </style>
+        </head>
+
+        <body>
+
+            <section>
+                <h2>Contagem de 1 a 10</h2>
+
+                <form
+                    name="frmfor"
+                    action="#"
+                    method="get"
+                    onsubmit="return validaFormulario()">
+
+                    <fieldset class="cadfor">
+                        <legend>Executar repetição</legend>
+
+                        <br><br>
+
+                        <button type="submit">Enviar</button>
+                    </fieldset>
+                </form>
+
+                <h3 class="titulo-console">Saída do console</h3>
+
+                <pre
+                    id="console-saida"
+                    class="console-saida">A saída aparecerá aqui.</pre>
+            </section>
+
+            <script type="text/javascript">
+                function validaFormulario() {
+                    let consoleSaida = document.getElementById("console-saida");
+
+                    consoleSaida.textContent = "";
+
+                    for (let i = 1; i < 11; i++) {
+                        let mensagem =
+                            "Passou a " + i + "ª vez e o número atual é " + i + ".";
+
+                        console.log(mensagem);
+
+                        consoleSaida.textContent += mensagem + "\n";
+
+                        alert(mensagem);
+                    }
+
+                    return false;
+                }
+            </script>
+
+        </body>
+
+        </html>
+            </textarea>
+
+            <br><br>
+
+            <button
+                type="button"
+                onclick="document.getElementById('resultado-for').srcdoc =
+                        document.getElementById('codigo-for').value;">
+                Executar página
+            </button>
+
+            <h3>Resultado</h3>
+
+            <iframe
+                id="resultado-for"
+                title="Resultado da atividade de contagem de 1 a 10"
+                width="900"
+                height="500"
+                sandbox="allow-scripts allow-forms allow-modals">
+            </iframe>
+        </details>
+    </section>
+</main>
+
+    <footer>
+        João Gabriel Soares Santos — ADS — UniSENAI Joinville
+    </footer>
+
+</body>
+
+</html>
