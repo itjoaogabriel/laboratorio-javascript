@@ -244,8 +244,7 @@
 
                 <script type="text/javascript">
                     function validaFormulario() {
-                        let consoleSaida =
-                            document.getElementById("console-saida");
+                        let consoleSaida = document.getElementById("console-saida");
 
                         consoleSaida.textContent = "";
 
@@ -255,45 +254,28 @@
                         let numerosDigitados = "";
 
                         while (conta <= 3) {
-                            numero = parseFloat(
-                                prompt("Digite o " + conta + "º número:")
-                            );
+                            numero = parseFloat(prompt("Digite o " + conta + "º número:"));
 
-                            let mensagemNumero =
-                                "O " + conta + "º número informado foi " +
-                                numero + ".";
+                            let mensagemNumero = "O " + conta + "º número informado foi " + numero + ".";
 
                             console.log(mensagemNumero);
-
-                            consoleSaida.textContent +=
-                                mensagemNumero + "\n";
+                            consoleSaida.textContent += mensagemNumero + "\n";
 
                             somatoria += numero;
-
                             numerosDigitados += numero + " ";
 
                             conta++;
                         }
 
-                        let mensagemNumeros =
-                            "Os números digitados foram: " +
-                            numerosDigitados;
-
-                        let mensagemSomatoria =
-                            "A somatória dos números é: " +
-                            somatoria + ".";
+                        let mensagemNumeros = "Os números digitados foram: " + numerosDigitados;
+                        let mensagemSomatoria = "A somatória dos números é: " + somatoria + ".";
 
                         console.log(mensagemNumeros);
                         console.log(mensagemSomatoria);
 
-                        consoleSaida.textContent +=
-                            "\n" + mensagemNumeros + "\n" +
-                            mensagemSomatoria;
+                        consoleSaida.textContent += "\n" + mensagemNumeros + "\n" + mensagemSomatoria;
 
-                        alert(
-                            mensagemNumeros + "\n" +
-                            mensagemSomatoria
-                        );
+                        alert(mensagemNumeros + "\n" + mensagemSomatoria);
 
                         return false;
                     }

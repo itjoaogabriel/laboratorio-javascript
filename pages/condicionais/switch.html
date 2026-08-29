@@ -94,9 +94,7 @@
                 Referência:
                 <a
                     href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/switch"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    MDN Web Docs — switch
+                    target="_blank" rel="noopener noreferrer">MDN Web Docs — switch
                 </a>
             </p>
         </section>
@@ -246,8 +244,11 @@
 
                             <br><br>
 
-                            <button type="reset" onclick="document.getElementById('console-saida').textContent =
-                                'A saída aparecerá aqui.';"> Limpar</button>
+                            <button
+                                type="reset"
+                                onclick="document.getElementById('console-saida').textContent = 'A saída aparecerá aqui.';">
+                                Limpar
+                            </button>
                             <button type="submit">Enviar</button>
                         </fieldset>
                     </form>
@@ -261,7 +262,6 @@
                 <script type="text/javascript">
                     function validaFormulario() {
                         let consoleSaida = document.getElementById("console-saida");
-
                         let mensagem = "";
 
                         consoleSaida.textContent = "";
@@ -270,6 +270,7 @@
 
                         if (numDia === "") {
                             mensagem = "Preencha o campo com um número inteiro.";
+
                             alert(mensagem);
                             console.log(mensagem);
                             consoleSaida.textContent = mensagem;
@@ -311,9 +312,7 @@
                                     break;
 
                                 default:
-                                    mensagem =
-                                        "O valor informado (" + numDia + ") " +
-                                        "não corresponde a um dia da semana.";
+                                    mensagem = "O valor informado (" + numDia + ") não corresponde a um dia da semana.";
 
                                     alert(mensagem);
                                     console.log(mensagem);
@@ -324,9 +323,7 @@
                                     return false;
                             }
 
-                            mensagem =
-                                "O número informado foi " + numDiaValidado + ".\n" +
-                                "O dia correspondente é " + diaSemana + ".";
+                            mensagem = "O número informado foi " + numDiaValidado + ".\n" + "O dia correspondente é " + diaSemana + ".";
 
                             alert(mensagem);
                             console.log(mensagem);
