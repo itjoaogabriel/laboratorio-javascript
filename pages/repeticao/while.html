@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>while - Laboratório JavaScript</title>
+
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="../../img/logo.png" alt="Logo do Laboratório JavaScript">
+        <h1>Laboratório JavaScript</h1>
+    </header>
+
+    <details class="menu-expansivel">
+        <summary class="botao-menu">Menu</summary>
+
+        <nav class="menu-principal" aria-label="Navegação principal">
+            <a class="opcao" href="../../index.html">Início</a>
+            <a class="opcao" href="../condicionais/estruturas-condicionais.html">Estruturas Condicionais</a>
+            <a class="opcao" href="../repeticao/estruturas-de-repeticao.html">Estruturas de Repetição</a>
+            <a class="opcao" href="../arrays/arrays.html">Vetores e Matrizes</a>
+        </nav>
+    </details>
+
+    <main>
+        <section class="explicacao-estrutura">
+            <div class="tecnologias-pagina">
+                <img src="../../img/html5.svg" alt="HTML5" width="80">
+                <img src="../../img/css3.svg" alt="CSS3" width="80">
+                <img src="../../img/javascript.svg" alt="JavaScript" width="80">
+            </div>
+
+            <h2>Estrutura de repetição while</h2>
+
+            <p>
+                A instrução <code>while</code> executa repetidamente um bloco
+                de instruções enquanto uma condição permanecer verdadeira.
+                Essa condição é verificada antes de cada repetição.
+            </p>
+
+            <h3>Quando utilizar</h3>
+
+            <p>
+                Essa estrutura é indicada quando a continuidade da repetição
+                depende de uma condição e a quantidade de execuções não precisa
+                estar determinada diretamente na declaração do laço.
+            </p>
+
+            <p>
+                Como a condição é verificada antes da execução, o bloco do
+                <code>while</code> pode não ser executado nenhuma vez caso a
+                condição inicial já seja falsa.
+            </p>
+
+            <h3>Sintaxe básica</h3>
+
+            <pre><code>
+                while (condicao) {
+                    // Instruções executadas enquanto a condição for verdadeira
+
+                    // Atualização da variável utilizada na condição
+                }
+            </code></pre>
+
+            <h3>Exemplo</h3>
+
+            <pre><code>
+                let tentativa = 1;
+
+                while (tentativa <= 3) {
+                    console.log("Tentativa número " + tentativa);
+
+                    tentativa++;
+                }
+            </code></pre>
+
+            <p>
+                A atualização da variável de controle é necessária para que a
+                condição possa se tornar falsa. Sem essa atualização, o programa
+                poderá entrar em uma repetição infinita.
+            </p>
+
+            <p class="fonte-conteudo">
+                Referência:
+                <a
+                    href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/while"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    MDN Web Docs — while
+                </a>
+            </p>
+        </section>
+
+        <section class="atividade-estrutura">
+            <h2>Atividade prática</h2>
+            <h3>Somatório de três números</h3>
+
+            <p class="enunciado-atividade">
+                Desenvolva uma aplicação que utilize a estrutura de repetição
+                <code>while</code> para solicitar três números ao usuário por
+                meio de <code>prompt()</code>. A cada repetição, o número
+                informado deverá ser acrescentado ao somatório. Ao final, o
+                programa deverá apresentar os três números digitados e o
+                resultado total da soma.
+            </p>
+
+            <p>
+                Como os valores serão solicitados por caixas de diálogo
+                <code>prompt()</code>, o formulário terá apenas o botão
+                <strong>Enviar</strong> e não possuirá campos de entrada.
+            </p>
+
+            <div class="orientacao-console">
+                <h3>Como acompanhar a saída</h3>
+
+                <p>
+                    A atividade apresentará os números informados e o somatório
+                    em uma caixa visual dentro da página. As mesmas informações
+                    também serão enviadas ao console real do navegador por meio
+                    de <code>console.log()</code>.
+                </p>
+
+                <p>
+                    No Google Chrome ou Microsoft Edge, pressione
+                    <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>J</kbd>
+                    para abrir diretamente o console. Também é possível pressionar
+                    <kbd>F12</kbd> e selecionar a aba <strong>Console</strong>.
+                    No macOS, utilize
+                    <kbd>Command</kbd> + <kbd>Option</kbd> + <kbd>J</kbd>.
+                </p>
+
+                <p>
+                    Consulte também as
+                    <a
+                        href="https://developer.chrome.com/docs/devtools/open/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        instruções do Chrome DevTools
+                    </a>.
+                </p>
+            </div>
+
+            <details class="testador-atividade">
+                <summary class="ver-codigo">Ver Código</summary>
+
+                <h3>Código da solução</h3>
+
+                <textarea id="codigo-while" name="fonte" cols="70" rows="25">
+            <!DOCTYPE html>
+            <html lang="pt-br">
+
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+                <title>Somatório de três números</title>
+
+                <style>
+                    body {
+                        font-family: Arial, sans-serif;
+                    }
+
+                    section {
+                        margin: 20px auto;
+                    }
+
+                    .cadsomatoria {
+                        width: 300px;
+                        margin: 0 auto 10px;
+                        font-weight: bold;
+                    }
+
+                    .cadsomatoria button {
+                        display: block;
+                        width: 40%;
+                        margin: 0 auto;
+                        background-color: #b1ccf5;
+                        font-weight: bold;
+                        font-size: 16px;
+                    }
+
+                    h2 {
+                        margin-top: 0;
+                        margin-bottom: 10px;
+                        text-align: center;
+                        font-size: 50px;
+                    }
+
+                    .titulo-console {
+                        margin-bottom: 8px;
+                        text-align: center;
+                    }
+
+                    .console-saida {
+                        box-sizing: border-box;
+                        width: 90%;
+                        max-width: 650px;
+                        min-height: 80px;
+                        margin: 20px auto;
+                        padding: 10px;
+                        overflow-wrap: anywhere;
+                        color: #f5f5f5;
+                        background-color: #1e1e1e;
+                        border-radius: 4px;
+                        font-family: Consolas, "Courier New", monospace;
+                        line-height: 1.5;
+                        white-space: pre-wrap;
+                    }
+                </style>
+            </head>
+
+            <body>
+
+                <section>
+                    <h2>Somatório de três números</h2>
+
+                    <form
+                        name="frmsomatoria"
+                        action="#"
+                        method="get"
+                        onsubmit="return validaFormulario()">
+
+                        <fieldset class="cadsomatoria">
+                            <legend>Executar somatório</legend>
+
+                            <br><br>
+
+                            <button type="submit">Enviar</button>
+                        </fieldset>
+                    </form>
+
+                    <h3 class="titulo-console">Saída do console</h3>
+
+                    <pre
+                        id="console-saida"
+                        class="console-saida">A saída aparecerá aqui.</pre>
+                </section>
+
+                <script type="text/javascript">
+                    function validaFormulario() {
+                        let consoleSaida =
+                            document.getElementById("console-saida");
+
+                        consoleSaida.textContent = "";
+
+                        let conta = 1;
+                        let somatoria = 0;
+                        let numero;
+                        let numerosDigitados = "";
+
+                        while (conta <= 3) {
+                            numero = parseFloat(
+                                prompt("Digite o " + conta + "º número:")
+                            );
+
+                            let mensagemNumero =
+                                "O " + conta + "º número informado foi " +
+                                numero + ".";
+
+                            console.log(mensagemNumero);
+
+                            consoleSaida.textContent +=
+                                mensagemNumero + "\n";
+
+                            somatoria += numero;
+
+                            numerosDigitados += numero + " ";
+
+                            conta++;
+                        }
+
+                        let mensagemNumeros =
+                            "Os números digitados foram: " +
+                            numerosDigitados;
+
+                        let mensagemSomatoria =
+                            "A somatória dos números é: " +
+                            somatoria + ".";
+
+                        console.log(mensagemNumeros);
+                        console.log(mensagemSomatoria);
+
+                        consoleSaida.textContent +=
+                            "\n" + mensagemNumeros + "\n" +
+                            mensagemSomatoria;
+
+                        alert(
+                            mensagemNumeros + "\n" +
+                            mensagemSomatoria
+                        );
+
+                        return false;
+                    }
+                </script>
+
+            </body>
+
+            </html>
+                </textarea>
+
+                <br><br>
+
+                <button
+                    type="button"
+                    onclick="document.getElementById('resultado-while').srcdoc =
+                            document.getElementById('codigo-while').value;">
+                    Executar página
+                </button>
+
+                <h3>Resultado</h3>
+
+                <iframe
+                    id="resultado-while"
+                    title="Resultado da atividade de somatório de três números"
+                    width="900"
+                    height="500"
+                    sandbox="allow-scripts allow-forms allow-modals">
+                </iframe>
+            </details>
+        </section>
+    </main>
+
+    <footer>
+        João Gabriel Soares Santos — ADS — UniSENAI Joinville
+    </footer>
+
+</body>
+
+</html>
