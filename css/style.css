@@ -1,19 +1,24 @@
 @charset "UTF-8";
 
-/* Aplica o cálculo de tamanho a todos os elementos */
+/* Configurações globais */
+
 * {
     box-sizing: border-box;
 }
 
-/* Configuração geral da página */
 body {
+    min-height: 100vh;
     margin: 0;
+    display: flex;
+    flex-direction: column;
     font-family: "Century Gothic", Arial, sans-serif;
     color: #03263a;
     background-color: #f2f8fb;
 }
 
+
 /* Cabeçalho */
+
 header {
     display: flex;
     align-items: center;
@@ -21,86 +26,86 @@ header {
     background-color: #008eb6;
 }
 
-/* Logo presente dentro do cabeçalho */
 header img {
     width: 45px;
     height: 45px;
     object-fit: contain;
 }
 
-/* Título presente dentro do cabeçalho */
 header h1 {
     margin: 0 0 0 3px;
-    font-size: 25px;
     color: #ffffff;
+    font-size: 25px;
 }
 
-/* Menu principal sempre visível */
+
+/* Navegação principal */
+
 .menu-principal {
     display: flex;
     align-items: center;
     gap: 12px;
     margin-left: 56px;
     padding: 0 20px;
-    background-color: transparent;
 }
 
-/* Opções do menu principal */
 .menu-principal .opcao {
     display: block;
     padding: 10px 16px;
     color: #ffffff;
     background-color: #67aed6;
+    border-radius: 20px;
     font-weight: bold;
     text-align: center;
     text-decoration: none;
     white-space: nowrap;
-    border-radius: 20px;
 }
 
-/* Mudança de cor ao passar o mouse */
 .menu-principal .opcao:hover {
     background-color: #203c5f;
 }
-/* Navegação específica de cada categoria */
+
+
+/* Navegação entre os conteúdos de cada categoria */
+
 .menu-conteudos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
     width: 90%;
     max-width: 1100px;
     margin: 20px auto;
     padding: 12px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
     background-color: #ffffff;
     border: 1px solid #d5e7ef;
     border-radius: 12px;
 }
 
-/* Botões das estruturas */
 .menu-conteudos .opcao-conteudo {
     display: block;
     padding: 10px 20px;
     color: #ffffff;
     background-color: #67aed6;
+    border-radius: 20px;
     font-weight: bold;
     text-decoration: none;
-    border-radius: 20px;
 }
 
-/* Mudança de cor ao passar o mouse */
 .menu-conteudos .opcao-conteudo:hover {
     background-color: #203c5f;
 }
 
-/* Área principal das páginas */
+
+/* Conteúdo principal */
+
 main {
     width: 90%;
     max-width: 1100px;
     margin: 30px auto;
+    text-align: center;
 }
 
-/* Blocos de conteúdo */
 section {
     margin-bottom: 25px;
     padding: 30px;
@@ -109,32 +114,22 @@ section {
     border-radius: 12px;
 }
 
-/* Títulos principais das seções */
+
+/* Títulos, textos e listas */
+
 h2 {
     margin-top: 0;
     margin-bottom: 20px;
     color: #03263a;
-    text-align: center;
     font-size: 32px;
+    text-align: center;
 }
 
-/* Subtítulos */
 h3 {
     margin-top: 28px;
     margin-bottom: 12px;
     color: #03263a;
     font-size: 21px;
-}
-
-/* Parágrafos dentro do conteúdo principal */
-main {
-    text-align: center;
-}
-
-main ul, main ol {
-    padding-left: 0;
-    list-style-position: inside;
-    text-align: center;
 }
 
 main p {
@@ -143,7 +138,35 @@ main p {
     line-height: 1.6;
 }
 
+main ul,
+main ol {
+    padding-left: 0;
+    list-style-position: inside;
+    text-align: center;
+}
+
+main li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+
+/* Links presentes no conteúdo */
+
+main a {
+    color: #047fa1;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+main a:hover {
+    color: #203c5f;
+    text-decoration: underline;
+}
+
+
 /* Blocos de sintaxe e exemplos */
+
 main pre {
     width: 90%;
     max-width: 750px;
@@ -152,7 +175,6 @@ main pre {
     overflow-x: auto;
     color: #ffffff;
     background-color: #67aed6;
-    border: 1px solid #67aed6;
     border-radius: 8px;
     text-align: left;
 }
@@ -172,34 +194,59 @@ main pre code {
     border-radius: 0;
 }
 
-/* Listas explicativas */
-main li {
-    margin-bottom: 8px;
-    line-height: 1.5;
-}
-
-/* Links presentes no conteúdo */
 
 /* Ícones das tecnologias */
+
 .tecnologias-pagina {
+    margin-bottom: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    margin-bottom: 25px;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
-/* Imagens dentro do grupo de tecnologias */
 .tecnologias-pagina img {
     width: 70px;
     height: 70px;
     object-fit: contain;
 }
 
+
+/* Blocos da atividade prática */
+
+.testador-atividade,
+.enunciado-atividade,
+.orientacao-console {
+    width: 90%;
+    max-width: 850px;
+}
+
+.enunciado-atividade {
+    margin: 0 auto 20px;
+    padding: 16px 18px;
+    background-color: #e6f3f8;
+    border-left: 4px solid #008eb6;
+    border-radius: 6px;
+    line-height: 1.6;
+}
+
+.orientacao-console {
+    margin: 25px auto;
+    padding: 20px;
+    background-color: #f2f8fb;
+    border: 1px solid #b8d4e0;
+    border-radius: 8px;
+}
+
+.orientacao-console h3 {
+    margin-top: 0;
+}
+
+
+/* Testador da atividade */
+
 .testador-atividade {
-    width: 100%;
-    max-width: 1000px;
     margin: 25px auto 0;
     padding: 25px;
     background-color: #f8fbfd;
@@ -216,21 +263,27 @@ main li {
     margin-top: 0;
 }
 
-.testador-atividade textarea {
+.testador-atividade textarea,
+.testador-atividade iframe {
     display: block;
-    width: 900px;
-    max-width: 100%;
+    width: 100%;
     height: 500px;
     margin: 0 auto;
-    padding: 15px;
-    color: #03263a;
     background-color: #ffffff;
     border: 1px solid #b8d4e0;
     border-radius: 8px;
+}
+
+.testador-atividade textarea {
+    padding: 15px;
+    overflow-y: auto;
+    color: #03263a;
     font-family: Consolas, "Courier New", monospace;
     font-size: 14px;
     line-height: 1.5;
     resize: none;
+    scrollbar-width: thin;
+    scrollbar-color: #8399b3 #ffffff;
 }
 
 .testador-atividade > button {
@@ -251,41 +304,8 @@ main li {
     background-color: #203c5f;
 }
 
-.testador-atividade iframe {
-    display: block;
-    width: 900px;
-    max-width: 100%;
-    height: 500px;
-    margin: 0 auto;
-    background-color: #ffffff;
-    border: 1px solid #b8d4e0;
-    border-radius: 8px;
-}
 
-.enunciado-atividade {
-    width: 90%;
-    max-width: 850px;
-    margin: 0 auto 20px;
-    padding: 16px 18px;
-    background-color: #e6f3f8;
-    border-left: 4px solid #008eb6;
-    border-radius: 6px;
-    line-height: 1.6;
-}
-
-.orientacao-console {
-    width: 90%;
-    max-width: 850px;
-    margin: 25px auto;
-    padding: 20px;
-    background-color: #f2f8fb;
-    border: 1px solid #b8d4e0;
-    border-radius: 8px;
-}
-
-.orientacao-console h3 {
-    margin-top: 0;
-}
+/* Elementos auxiliares */
 
 .fonte-conteudo {
     margin-top: 25px;
@@ -303,4 +323,16 @@ kbd {
     border-radius: 4px;
     font-family: Consolas, "Courier New", monospace;
     font-size: 13px;
+}
+
+
+/* Rodapé */
+
+footer {
+    width: 100%;
+    margin-top: auto;
+    padding: 10px 20px;
+    color: #ffffff;
+    background-color: #047fa1;
+    text-align: center;
 }
