@@ -11,7 +11,6 @@
 </head>
 
 <body>
-
     <header>
         <img src="../../img/logo.png" alt="Logo do Laboratório JavaScript">
         <h1>Laboratório JavaScript</h1>
@@ -33,9 +32,9 @@
     <main>
         <section class="explicacao-estrutura">
             <div class="tecnologias-pagina">
-                <img src="../../img/html5.svg" alt="HTML5" width="80">
-                <img src="../../img/css3.svg" alt="CSS3" width="80">
-                <img src="../../img/javascript.svg" alt="JavaScript" width="80">
+                <img src="../../img/html5.svg" alt="HTML5">
+                <img src="../../img/css3.svg" alt="CSS3">
+                <img src="../../img/javascript.svg" alt="JavaScript">
             </div>
 
             <h2>Estrutura de repetição while</h2>
@@ -75,7 +74,7 @@
             <pre><code>
                 let tentativa = 1;
 
-                while (tentativa <= 3) {
+                while (tentativa &lt;= 3) {
                     console.log("Tentativa número " + tentativa);
 
                     tentativa++;
@@ -92,9 +91,7 @@
                 Referência:
                 <a
                     href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/while"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    MDN Web Docs — while
+                    target="_blank" rel="noopener noreferrer"> MDN Web Docs — while
                 </a>
             </p>
         </section>
@@ -140,10 +137,8 @@
                 <p>
                     Consulte também as
                     <a
-                        href="https://developer.chrome.com/docs/devtools/open/"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        instruções do Chrome DevTools
+                        href="https://developer.chrome.com/docs/devtools/open/" target="_blank"
+                        rel="noopener noreferrer"> instruções do Chrome DevTools
                     </a>.
                 </p>
             </div>
@@ -151,8 +146,9 @@
             <div class="testador-atividade">
                 <h3>Código da solução</h3>
 
-                <textarea id="codigo-while" name="fonte" cols="70" rows="25">
+                <textarea id="codigo-while" name="fonte">
             <!DOCTYPE html>
+            <!-- Início do documento HTML -->
             <html lang="pt-br">
 
             <head>
@@ -161,7 +157,9 @@
 
                 <title>Somatório de três números</title>
 
+                <!-- Início do CSS -->
                 <style>
+                    /* Aparência básica do documento */
                     body {
                         font-family: Arial, sans-serif;
                     }
@@ -170,6 +168,7 @@
                         margin: 20px auto;
                     }
 
+                    /* Formulário usado para iniciar a atividade */
                     .cadsomatoria {
                         width: 300px;
                         margin: 0 auto 10px;
@@ -192,6 +191,7 @@
                         font-size: 50px;
                     }
 
+                    /* Título e caixa que reproduzem visualmente a saída do console */
                     .titulo-console {
                         margin-bottom: 8px;
                         text-align: center;
@@ -213,8 +213,10 @@
                         white-space: pre-wrap;
                     }
                 </style>
+                <!-- Fim do CSS -->
             </head>
 
+            <!-- Início do conteúdo HTML -->
             <body>
 
                 <section>
@@ -242,17 +244,23 @@
                         class="console-saida">A saída aparecerá aqui.</pre>
                 </section>
 
+                <!-- Fim do conteúdo HTML -->
+
+                <!-- Início do JavaScript -->
                 <script type="text/javascript">
                     function validaFormulario() {
+                        // Referência da caixa que receberá a saída da atividade.
                         let consoleSaida = document.getElementById("console-saida");
 
                         consoleSaida.textContent = "";
 
+                        // Estado inicial: contador, soma e registro dos números digitados.
                         let conta = 1;
                         let somatoria = 0;
                         let numero;
                         let numerosDigitados = "";
 
+                        // Entrada e processamento: solicita três números e acumula cada valor.
                         while (conta <= 3) {
                             numero = parseFloat(prompt("Digite o " + conta + "º número:"));
 
@@ -267,6 +275,7 @@
                             conta++;
                         }
 
+                        // Saída: prepara os números coletados e o resultado da soma.
                         let mensagemNumeros = "Os números digitados foram: " + numerosDigitados;
                         let mensagemSomatoria = "A somatória dos números é: " + somatoria + ".";
 
@@ -280,6 +289,7 @@
                         return false;
                     }
                 </script>
+                <!-- Fim do JavaScript -->
 
             </body>
 
@@ -298,17 +308,13 @@
                 <iframe
                     id="resultado-while"
                     title="Resultado da atividade de somatório de três números"
-                    width="900"
-                    height="500"
                     sandbox="allow-scripts allow-forms allow-modals">
                 </iframe>
             </div>
         </section>
     </main>
 
-    <footer>
-        João Gabriel Soares Santos — ADS — UniSENAI Joinville
-    </footer>
+    <footer>João Gabriel Soares Santos — ADS — UniSENAI Joinville</footer>
 
 </body>
 

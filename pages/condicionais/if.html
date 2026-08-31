@@ -11,7 +11,6 @@
 </head>
 
 <body>
-
     <header>
         <img src="../../img/logo.png" alt="Logo do Laboratório JavaScript">
         <h1>Laboratório JavaScript</h1>
@@ -32,9 +31,9 @@
     <main>
         <section class="explicacao-estrutura">
             <div class="tecnologias-pagina">
-                <img src="../../img/html5.svg" alt="HTML5" width="80">
-                <img src="../../img/css3.svg" alt="CSS3" width="80">
-                <img src="../../img/javascript.svg" alt="JavaScript" width="80">
+                <img src="../../img/html5.svg" alt="HTML5">
+                <img src="../../img/css3.svg" alt="CSS3">
+                <img src="../../img/javascript.svg" alt="JavaScript">
             </div>
 
             <h2>Estrutura condicional if...else</h2>
@@ -69,7 +68,7 @@
             <pre><code>
                 const estoque = 3;
 
-                if (estoque > 0) {
+                if (estoque &gt; 0) {
                     console.log("Produto disponível");
                 } else {
                     console.log("Produto indisponível");
@@ -78,9 +77,10 @@
 
             <p class="fonte-conteudo">
                 Referência:
-                <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/if...else"
-                target="_blank"
-                rel="noopener noreferrer">MDN Web Docs — if...else</a>
+                <a
+                    href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/if...else"
+                    target="_blank" rel="noopener noreferrer">MDN Web Docs — if...else
+                </a>
             </p>
         </section>
 
@@ -100,8 +100,9 @@
             <div class="testador-atividade">
                 <h3>Código da solução</h3>
 
-                <textarea id="codigo-if" name="fonte" cols="70" rows="25">
+                <textarea id="codigo-if" name="fonte">
         <!DOCTYPE html>
+        <!-- Início do documento HTML -->
         <html lang="pt-br">
 
         <head>
@@ -110,7 +111,9 @@
 
             <title>Verificação de maioridade</title>
 
+            <!-- Início do CSS -->
             <style>
+                /* Aparência básica do documento */
                 body {
                     font-family: Arial, sans-serif;
                 }
@@ -119,6 +122,7 @@
                     margin: 20px auto;
                 }
 
+                /* Formulário usado para iniciar a atividade */
                 .cadidade {
                     width: 300px;
                     margin: 0 auto 10px;
@@ -151,8 +155,10 @@
                     font-size: 50px;
                 }
             </style>
+            <!-- Fim do CSS -->
         </head>
 
+        <!-- Início do conteúdo HTML -->
         <body>
 
             <section>
@@ -179,17 +185,24 @@
                 </form>
             </section>
 
+            <!-- Fim do conteúdo HTML -->
+
+            <!-- Início do JavaScript -->
             <script type="text/javascript">
                 function validaFormulario() {
+                    // Entrada: lê o valor digitado no campo de idade.
                     let idade = document.getElementById("idade").value;
 
+                    // Validação: impede a execução quando o campo está vazio.
                     if (idade === "") {
                         alert("Preencha o campo de idade.");
                         document.getElementById("idade").focus();
                         return false;
                     } else {
+                        // Processamento: converte o texto recebido em um número inteiro.
                         let idadeValidada = parseInt(idade);
 
+                        // Decisão e saída: compara a idade com 18 e informa o resultado.
                         if (idadeValidada >= 18) {
                             alert("Sua idade é " + idadeValidada + " e você é maior de idade.");
                         } else {
@@ -200,10 +213,12 @@
                     return false;
                 }
             </script>
+            <!-- Fim do JavaScript -->
 
         </body>
 
         </html>
+        <!-- Fim do documento HTML -->
                 </textarea>
 
                 <button
@@ -218,17 +233,13 @@
                 <iframe
                     id="resultado-if"
                     title="Resultado da atividade de verificação de maioridade"
-                    width="900"
-                    height="500"
                     sandbox="allow-scripts allow-forms allow-modals">
                 </iframe>
             </div>
         </section>
     </main>
 
-    <footer>
-        João Gabriel Soares Santos — ADS — UniSENAI Joinville
-    </footer>
+    <footer>João Gabriel Soares Santos — ADS — UniSENAI Joinville</footer>
 
 </body>
 
