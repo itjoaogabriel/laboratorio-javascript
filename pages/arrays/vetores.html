@@ -11,7 +11,6 @@
 </head>
 
 <body>
-
     <header>
         <img src="../../img/logo.png" alt="Logo do Laboratório JavaScript">
         <h1>Laboratório JavaScript</h1>
@@ -32,9 +31,9 @@
     <main>
         <section class="explicacao-estrutura">
             <div class="tecnologias-pagina">
-                <img src="../../img/html5.svg" alt="HTML5" width="80">
-                <img src="../../img/css3.svg" alt="CSS3" width="80">
-                <img src="../../img/javascript.svg" alt="JavaScript" width="80">
+                <img src="../../img/html5.svg" alt="HTML5">
+                <img src="../../img/css3.svg" alt="CSS3">
+                <img src="../../img/javascript.svg" alt="JavaScript">
             </div>
 
             <h2>Vetores em JavaScript</h2>
@@ -87,7 +86,7 @@
             <pre><code>
                 let notas = [8.5, 7, 9];
 
-                for (let i = 0; i < 3; i++) {
+                for (let i = 0; i &lt; 3; i++) {
                     console.log(notas[i]);
                 }
             </code></pre>
@@ -101,9 +100,7 @@
                 Referência:
                 <a
                     href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    MDN Web Docs — Array
+                    target="_blank" rel="noopener noreferrer"> MDN Web Docs — Array
                 </a>
             </p>
         </section>
@@ -148,8 +145,7 @@
                     Consulte também as
                     <a
                         href="https://developer.chrome.com/docs/devtools/open/"
-                        target="_blank"
-                        rel="noopener noreferrer">
+                        target="_blank" rel="noopener noreferrer">
                         instruções do Chrome DevTools
                     </a>.
                 </p>
@@ -158,8 +154,9 @@
             <div class="testador-atividade">
                 <h3>Código da solução</h3>
 
-                <textarea id="codigo-vetores" name="fonte" cols="70" rows="25">
+                <textarea readonly id="codigo-vetores" name="fonte">
             <!DOCTYPE html>
+            <!-- Início do documento HTML -->
             <html lang="pt-br">
 
             <head>
@@ -168,7 +165,9 @@
 
                 <title>Notas iguais ou superiores a 7,5</title>
 
+                <!-- Início do CSS -->
                 <style>
+                    /* Aparência básica do documento */
                     body {
                         font-family: Arial, sans-serif;
                     }
@@ -177,6 +176,7 @@
                         margin: 20px auto;
                     }
 
+                    /* Formulário usado para iniciar a atividade */
                     .cadvetor {
                         width: 300px;
                         margin: 0 auto 10px;
@@ -199,6 +199,7 @@
                         font-size: 50px;
                     }
 
+                    /* Título e caixa que reproduzem visualmente a saída do console */
                     .titulo-console {
                         margin-bottom: 8px;
                         text-align: center;
@@ -220,8 +221,10 @@
                         white-space: pre-wrap;
                     }
                 </style>
+                <!-- Fim do CSS -->
             </head>
 
+            <!-- Início do conteúdo HTML -->
             <body>
 
                 <section>
@@ -249,15 +252,20 @@
                         class="console-saida">A saída aparecerá aqui.</pre>
                 </section>
 
+                <!-- Fim do conteúdo HTML visível -->
+
+                <!-- Início do JavaScript -->
                 <script type="text/javascript">
                     function validaFormulario() {
                         let consoleSaida = document.getElementById("console-saida");
 
                         consoleSaida.textContent = "";
 
+                        // Estado inicial: índice de repetição e vetor que armazenará as notas.
                         let i;
                         let notas = [];
 
+                        // Entrada: preenche as três posições do vetor.
                         for (i = 0; i < 3; i++) {
                             notas[i] = parseFloat(prompt("Digite a " + (i+1) + "ª nota:"));
 
@@ -267,6 +275,7 @@
                             consoleSaida.textContent += mensagemNota + "\n";
                         }
 
+                        // Prepara o título que separa a coleta do relatório final.
                         let tituloRelatorio = "Notas iguais ou superiores a 7,5";
 
                         console.log("");
@@ -275,6 +284,7 @@
 
                         consoleSaida.textContent += "\n\n" + tituloRelatorio + "\n";
 
+                        // Processamento e saída: exibe somente as notas a partir de 7,5.
                         for (i = 0; i < 3; i++) {
                             if (notas[i] >= 7.5) {
                                 console.log(notas[i]);
@@ -285,10 +295,12 @@
                         return false;
                     }
                 </script>
+                <!-- Fim do JavaScript -->
 
             </body>
 
             </html>
+            <!-- Fim do documento HTML -->
                 </textarea>
 
                 <button
@@ -303,17 +315,13 @@
                 <iframe
                     id="resultado-vetores"
                     title="Resultado da atividade de notas iguais ou superiores a 7,5"
-                    width="900"
-                    height="500"
                     sandbox="allow-scripts allow-forms allow-modals">
                 </iframe>
             </div>
         </section>
     </main>
 
-    <footer>
-        João Gabriel Soares Santos — ADS — UniSENAI Joinville
-    </footer>
+    <footer>João Gabriel Soares Santos — ADS — UniSENAI Joinville</footer>
 
 </body>
 

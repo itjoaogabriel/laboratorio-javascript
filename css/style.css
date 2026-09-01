@@ -336,3 +336,40 @@ footer {
     background-color: #047fa1;
     text-align: center;
 }
+
+/* Ajustes para telas menores */
+
+@media (max-width: 800px) {
+    header {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .menu-principal {
+        width: 100%;
+        margin-left: 0;
+        padding: 5px 0 0;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .menu-conteudos {
+        flex-wrap: wrap;
+    }
+
+    main {
+        width: 95%;
+    }
+
+    section {
+        padding: 20px 15px;
+    }
+
+    .testador-atividade,
+    .enunciado-atividade,
+    .orientacao-console {
+        width: 100%;
+    }
+}
